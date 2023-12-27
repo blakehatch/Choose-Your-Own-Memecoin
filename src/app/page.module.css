@@ -41,6 +41,17 @@
   position: relative; /* Make title relative to the main container */
 }
 
+@media (max-width: 600px) {
+  .title {
+    font-size: 1em; /* Smaller font for mobile */
+    height: 35px;
+  }
+  .bookTitle {
+    font-size: 3em; /* Smaller font for mobile */
+    height: 110px;
+  }
+}
+
 .subtitle {
   font-size: 1.5em; /* Make font larger than title */
   color: black; /* Make font color black */
@@ -58,9 +69,9 @@
   margin-right: 25px;
   margin-bottom: 25px;
   margin-left: 25px;
-  border: 20px solid #FAF250;
-  border-radius: 25px;
-  box-shadow: 0 0 0 5px #D98531;
+  border: 20px solid #D98531;
+  border-radius: 15px;
+  box-shadow: 0 0 0 10px #FAF250;
   background: #000; /* Make the center clear to show the background */
   min-height: 1500px;
   width: 90%;
@@ -74,6 +85,7 @@
   top: 50%;
   left: 50%;
   height: 1px;
+  border-radius: 15px;
   width: 1px;
   background-color: #fff;
   border-radius: 50%;

@@ -15,6 +15,7 @@
 .inner {
     width: 100%;
     max-width: 300px;
+    min-width: 250px;
     background-color: rgb(249, 249, 239);
     color: black;
     border-radius: 5px;
