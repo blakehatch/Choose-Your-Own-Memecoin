@@ -1,0 +1,55 @@
+
+.container {
+    min-width: 100px;
+    min-height: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column; /* Align divs inside of this in rows */
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative; /* Make title relative to the main container */
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.inner {
+    width: 100%;
+    max-width: 300px;
+    background-color: rgb(249, 249, 239);
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Align divs inside of this in rows */
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative; /* Make title relative to the main container */
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    gap: 10px; /* Add a gap between each item */
+    width: 50%;
+    height: 32px;
+    margin-top: 5px;
+}
+
+.title {
+    margin-top: 5px;
+    width: 90%;
+    text-align: center;
+}
+
+.writeInButton {
+    margin-top: -12px;
+}
+
+.buttonContainer {
+    margin-top: -18px;
+    width: 32px;
+}

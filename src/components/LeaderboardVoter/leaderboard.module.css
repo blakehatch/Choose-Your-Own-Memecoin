@@ -1,0 +1,78 @@
+
+.container {
+    min-width: 100px;
+    min-height: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column; /* Align divs inside of this in rows */
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative; /* Make title relative to the main container */
+}
+
+.inner {
+    width: 100%;
+    max-width: 300px;
+    background-color: rgb(249, 249, 239);
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Align divs inside of this in rows */
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative; /* Make title relative to the main container */
+}
+
+.leaderboard {
+    max-height: 200px;
+    overflow-y: scroll;
+    scrollbar-color: black;
+    width: 90%;
+}
+
+.vote {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 20px;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.newVote {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 5px;
+    height: 32px;
+}
+
+.input {
+    background-color: rgb(249, 249, 239);
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 32px;
+}
+
+.title {
+    margin-top: 5px;
+}
+
+.button {
+    margin-top: -12px;
+    width: 50px;
+}
+
+.writeInButton {
+    margin-top: -12px;
+    width: 50px;
+}
+
+.writeInInput {
+    height: 32px;
+}

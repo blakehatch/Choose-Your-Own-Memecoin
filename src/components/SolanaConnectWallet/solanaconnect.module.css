@@ -1,0 +1,51 @@
+.container {
+    min-width: 100px;
+    min-height: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column; /* Align divs inside of this in rows */
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative; /* Make title relative to the main container */
+}
+
+.inner {
+    width: 100%;
+    max-width: 300px;
+    background-color: rgb(249, 249, 239);
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Align divs inside of this in rows */
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative; /* Make title relative to the main container */
+}
+
+.buttons {
+    width: 80%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.icon {
+    width: 25px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.subtitle {
+    margin-top: 5px;
+}
