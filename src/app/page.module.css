@@ -41,14 +41,14 @@
   position: relative; /* Make title relative to the main container */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 660px) {
   .title {
-    font-size: 1em; /* Smaller font for mobile */
-    height: 35px;
+    font-size: 1em !important; /* Smaller font for mobile */
+    height: 35px !important;
   }
   .bookTitle {
-    font-size: 3em; /* Smaller font for mobile */
-    height: 110px;
+    font-size: 3em !important; /* Smaller font for mobile */
+    height: 110px !important;
   }
 }
 
