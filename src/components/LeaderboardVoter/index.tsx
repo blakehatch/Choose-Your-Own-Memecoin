@@ -67,8 +67,8 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
 
   return (
     <div className={styles.container}>
-      {address && JSON.stringify(findItemById(address?.toString(), title))}
-      {publicKey && JSON.stringify(findItemById(publicKey?.toString(), title))}
+      {/* {address && JSON.stringify(findItemById(address?.toString(), title))}
+      {publicKey && JSON.stringify(findItemById(publicKey?.toString(), title))} */}
         <div className={styles.inner}>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.labels}>
