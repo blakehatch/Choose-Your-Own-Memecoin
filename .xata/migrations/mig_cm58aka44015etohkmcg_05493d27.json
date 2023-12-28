@@ -1,0 +1,11 @@
+{
+  "id": "mig_cm58aka44015etohkmcg",
+  "checksum": "1:05493d27a0b26cc890a394a4ee9b7a319409fb806abd59a3a5889100165da322",
+  "operations": [
+    {
+      "addTable": {
+        "table": "Votes"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "mig_cm66hoq44015etohkuig",
+  "parentID": "mig_cm66ho3bg06p0tdtg6pg",
+  "checksum": "1:cf2b9d4568620f187537060d15f201dcd72be8e0b9a4856b1d9b425233360047",
+  "operations": [
+    {
+      "addTable": {
+        "table": "Chains"
+      }
+    }
+  ]
+}

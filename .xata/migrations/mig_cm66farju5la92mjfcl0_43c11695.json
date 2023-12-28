@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm66farju5la92mjfcl0",
+  "parentID": "mig_cm66f5a44015etohkuh0",
+  "checksum": "1:43c11695c9eb126b21864419f40e631b5bfd5b4c2ddf8e4a37b9e420f7278ed5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "wallets",
+          "type": "multiple"
+        },
+        "table": "Votes"
+      }
+    }
+  ]
+}

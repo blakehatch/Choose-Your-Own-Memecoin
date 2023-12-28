@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm66mh244015etohkur0",
+  "parentID": "mig_cm66mci44015etohkuq0",
+  "checksum": "1:25397743d801271442d86425387d3f9630672056361aef8a9de8cb197c469d79",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "voted_total_supply_up",
+          "type": "bool"
+        },
+        "table": "Wallets"
+      }
+    }
+  ]
+}

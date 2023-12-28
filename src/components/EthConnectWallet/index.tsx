@@ -18,9 +18,9 @@ export default function EthConnectWallet() {
         <Image className={styles.icon} src={EthLogo} alt="ETH" /> <h2 className={styles.subtitle}>Ethereum Wallets</h2>
       </div>
       <div className={styles.buttons}>
-        {!isConnected ? <Button onClick={() => open()}>Connect Wallet</Button> : 
-        <Button onClick={() => open()}>{address}</Button>}
-        <Button onClick={() => open({ view: 'Networks' })}>Choose EVM Networks</Button>
+        {!isConnected ? <Button overrideEnabled={true} onClick={() => open()}>Connect Wallet</Button> : 
+        <Button overrideEnabled={true} onClick={() => open()}>{address}</Button>}
+        <Button overrideEnabled={true} onClick={() => open({ view: 'Networks' })}>Choose EVM Networks</Button>
       </div>
       </div>
     </div>

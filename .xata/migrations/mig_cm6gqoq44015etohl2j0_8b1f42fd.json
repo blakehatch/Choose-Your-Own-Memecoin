@@ -1,0 +1,14 @@
+{
+  "id": "mig_cm6gqoq44015etohl2j0",
+  "parentID": "mig_cm66mh244015etohkur0",
+  "checksum": "1:8b1f42fdac11f37135c3fa0479acf841d5a7d13de416e81c02ab5571cee4b213",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "Coins_Per_ETH",
+        "oldName": "voted_cpe_up",
+        "table": "Wallets"
+      }
+    }
+  ]
+}

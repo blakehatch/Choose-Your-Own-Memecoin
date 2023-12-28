@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm6gusjbg06p0tdtg9m0",
+  "parentID": "mig_cm6grd244015etohl2k0",
+  "checksum": "1:2811c7ba084bf58a4d644c95f00fbfe3e21326bd7b191683385fb282a0b6f9d0",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "votes",
+          "type": "int"
+        },
+        "table": "Tickers"
+      }
+    }
+  ]
+}

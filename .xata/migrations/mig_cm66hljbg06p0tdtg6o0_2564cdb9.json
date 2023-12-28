@@ -1,0 +1,12 @@
+{
+  "id": "mig_cm66hljbg06p0tdtg6o0",
+  "parentID": "mig_cm66farju5la92mjfcl0",
+  "checksum": "1:2564cdb99ccfbb43a65de38bf2a282d240c7a5cd0ac1acdb86aafb88bdfbc61d",
+  "operations": [
+    {
+      "addTable": {
+        "table": "Tickers"
+      }
+    }
+  ]
+}

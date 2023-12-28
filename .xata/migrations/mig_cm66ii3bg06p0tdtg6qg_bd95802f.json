@@ -1,0 +1,13 @@
+{
+  "id": "mig_cm66ii3bg06p0tdtg6qg",
+  "parentID": "mig_cm66hoq44015etohkuig",
+  "checksum": "1:bd95802fc3705e560b8e03f1b98069e3d860fe1bccd0e7161593973e5f13cbca",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "Tokenomics",
+        "oldName": "Votes"
+      }
+    }
+  ]
+}

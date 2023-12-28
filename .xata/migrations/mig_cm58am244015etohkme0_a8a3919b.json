@@ -1,0 +1,12 @@
+{
+  "id": "mig_cm58am244015etohkme0",
+  "parentID": "mig_cm58aka44015etohkmcg",
+  "checksum": "1:a8a3919bfa3b6f4053aff8c9ddd816a0bfb2fb98eea220768434c9fb9791d9a3",
+  "operations": [
+    {
+      "addTable": {
+        "table": "Wallets"
+      }
+    }
+  ]
+}

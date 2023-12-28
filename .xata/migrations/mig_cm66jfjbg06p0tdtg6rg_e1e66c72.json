@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm66jfjbg06p0tdtg6rg",
+  "parentID": "mig_cm66ii3bg06p0tdtg6qg",
+  "checksum": "1:e1e66c7213d3478fcbb3d24413215137079ac633211a2898403b355000e3553a",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "votes",
+          "type": "int"
+        },
+        "table": "Chains"
+      }
+    }
+  ]
+}

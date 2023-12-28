@@ -1,0 +1,14 @@
+{
+  "id": "mig_cm6gr5bbg06p0tdtg9l0",
+  "parentID": "mig_cm6gqoq44015etohl2j0",
+  "checksum": "1:1c22d875ab49e98adf69090ddc499ea78e7413c6bf4a6d2560fa940900fdc864",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "Coins_Per_Vote",
+        "oldName": "voted_coins_per_vote_up",
+        "table": "Wallets"
+      }
+    }
+  ]
+}

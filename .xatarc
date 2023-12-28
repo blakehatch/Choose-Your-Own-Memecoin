@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Blake-Hatch-s-workspace-a0lhrv.us-east-1.xata.sh/db/CYOMC",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mig_cm6grajju5la92mjfeug",
+  "parentID": "mig_cm6gr5bbg06p0tdtg9l0",
+  "checksum": "1:f17d071c50756ee4f163ff0c64071b8e5f74c7711784ad03a7e0f23db88e0266",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "Presale_Mint_Limit",
+        "oldName": "voted_presale_limit_up",
+        "table": "Wallets"
+      }
+    }
+  ]
+}

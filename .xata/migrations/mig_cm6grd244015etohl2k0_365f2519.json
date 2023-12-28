@@ -1,0 +1,14 @@
+{
+  "id": "mig_cm6grd244015etohl2k0",
+  "parentID": "mig_cm6grajju5la92mjfeug",
+  "checksum": "1:365f2519301cca667fffeb6201bc68389dfbbf2d4d85c80d9ae31506ac75d4f5",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "Total_Supply",
+        "oldName": "voted_total_supply_up",
+        "table": "Wallets"
+      }
+    }
+  ]
+}
