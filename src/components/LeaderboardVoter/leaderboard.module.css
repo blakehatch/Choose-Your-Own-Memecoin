@@ -87,6 +87,7 @@
     margin-top: -12px;
     width: 50px;
     float: right;
+    min-width: 50px;
 }
 
 .writeInButton {
