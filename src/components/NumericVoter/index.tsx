@@ -48,7 +48,9 @@ export default function NumericVoter({title, value, voted, id, increment, wallet
         if (title === "Total Votes before Final Countdown") {
           return item["Total_Votes"];
         }
+        return null;
       }
+      return null;
     }
     else {
       return null;
@@ -76,7 +78,6 @@ export default function NumericVoter({title, value, voted, id, increment, wallet
       {publicKey && JSON.stringify(findItemById(publicKey?.toString(), title))} */}
         <div className={styles.inner}>
             <h2 className={styles.title}>{title}</h2>
-            {/* {JSON.stringify(findItemById(address?.toString() || "0x341Ab3097C45588AF509db745cE0823722E5Fb19", title))} */}
             <div className={styles.inputs}>
                 <div className={styles.buttonContainer}><Button disabled={picked === false || (itemFound() && findItemById(address?.toString() || publicKey?.toString() || "", title))} onClick={async () => {
                   if (value && !itemFound()) {

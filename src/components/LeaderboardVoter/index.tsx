@@ -53,7 +53,9 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
         if (title === "Chain") {
           return item["voted_chain"];
         }
+        return null;
       }
+      return null;
     }
     else {
       return null;
@@ -93,7 +95,7 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
             <div className={styles.leaderboard}>
                 {itemsState.map((item: any, i: number) => (
                     <div className={styles.vote} key={i}>
-                    <div>{(voteInput === item.id || findItemById(address?.toString() || publicKey?.toString() || "", title)) ? item.votes + 1 : item.votes}</div> <div>{title === "Ticker" && "$"}{item.id}</div>
+                    <div>{(voteInput === item.id) ? item.votes + 1 : item.votes}</div> <div>{title === "Ticker" && !item.id.startsWith("$") ? "$" : ""}{item.id}</div>
                     <div className={styles.button}>
                     <Button disabled={(itemFound() && (findItemById(address?.toString() || publicKey?.toString() || "", title) !== item.id)) || '' !== voteInput && voteInput !== item.id} onClick={() => {
                       setVoteInput(item.id);
