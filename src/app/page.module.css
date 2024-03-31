@@ -56,7 +56,17 @@
   font-size: 1.5em; /* Make font larger than title */
   color: black; /* Make font color black */
   width: 100%; /* Make width of the screen */
-  height: 100px;
+  height: 60px;
+  text-align: center;
+  position: relative; /* Make title relative to the main container */
+}
+
+.helpLink {
+  font-size: 1.2em; /* Shrink the font size */
+  color: #DC3D33; /* Make font color #DC3D33 */
+  text-decoration: underline; /* Make text underlined */
+  width: 100%; /* Make width of the screen */
+  height: 40px;
   text-align: center;
   position: relative; /* Make title relative to the main container */
 }
@@ -105,3 +115,12 @@
       transform: scale(1.5);
   }
 }
+
+.helpText {
+  font-size: 14pt;
+  padding: 20px; /* Padding on the outside */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spaces between divs inside the container */
+}
+

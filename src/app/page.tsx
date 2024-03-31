@@ -5,7 +5,9 @@ import LeaderboardVoter from '@/components/LeaderboardVoter'
 import EthConnectWallet from '@/components/EthConnectWallet'
 import SolanaConnectWallet from '@/components/SolanaConnectWallet'
 import { getXataClient } from '../xata';
+import Button from '@/components/Button'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 export const dynamic = 'force-dynamic';
 
@@ -34,7 +36,10 @@ export default async function Home() {
       <div className={styles.subtitle}>
         CHOOSE FROM OVER 25 POSSIBLE ENDINGS
       </div>
+      <div className={styles.helpLink}><Link href="/about" >Learn More ➜</Link></div>
       <div className={styles.coverContainer}>
+      <div>
+      </div>
       <SolanaConnectWallet/>
       <EthConnectWallet/>
       <LeaderboardVoter title="Name" items={names} wallets={wallets}/>
