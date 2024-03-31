@@ -41,7 +41,7 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
   const { publicKey } = useWallet();
 
   const findItemById = (id: string, title: string) => {
-    if (wallets) {
+    if (wallets.length > 0) {
       let item = wallets.find((item: any) => item.id === id)
       if (item) {
         if (title === "Name") {
@@ -56,13 +56,23 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
       }
     }
     else {
-      return {};
+      return null;
     }
   }
 
   const itemFound = () => {
     return ((address && findItemById(address?.toString(), title) !== null) 
                 || (publicKey && findItemById(publicKey?.toString(), title) !== null)) || false
+  }
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+  return <div></div>;
   }
 
   return (
@@ -83,7 +93,7 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
             <div className={styles.leaderboard}>
                 {itemsState.map((item: any, i: number) => (
                     <div className={styles.vote} key={i}>
-                    <div>{item.votes}</div> <div>{title === "Ticker" && "$"}{item.id}</div>
+                    <div>{(voteInput === item.id || findItemById(address?.toString() || publicKey?.toString() || "", title)) ? item.votes + 1 : item.votes}</div> <div>{title === "Ticker" && "$"}{item.id}</div>
                     <div className={styles.button}>
                     <Button disabled={(itemFound() && (findItemById(address?.toString() || publicKey?.toString() || "", title) !== item.id)) || '' !== voteInput && voteInput !== item.id} onClick={() => {
                       setVoteInput(item.id);

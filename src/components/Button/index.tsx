@@ -6,11 +6,16 @@ import React from 'react';
 import { ButtonI } from '../../types/button';
 import { useAccount } from 'wagmi';
 import { useWallet } from '@solana/wallet-adapter-react';
-
+import { useEffect, useState } from 'react';
 
 const Button = ({ icon, children, onClick, disabled, overrideEnabled }: ButtonI): JSX.Element => {
   const { address, isConnected } = useAccount();
   const { publicKey } = useWallet();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <>
