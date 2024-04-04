@@ -15,9 +15,16 @@ export default function EthConnectWallet() {
   const [isClient, setIsClient] = useState(false);
   const { publicKey } = useWallet();
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
+    setLoading(false);
     setIsClient(true);
   }, []);
+
+  if (loading) {
+  return <div></div>;
+  }
 
   return (
     <div className={styles.container}>

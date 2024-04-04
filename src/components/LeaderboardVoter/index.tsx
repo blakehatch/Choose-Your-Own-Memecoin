@@ -18,6 +18,9 @@ const getPathFromTitle = (title: string) => {
     }
 }
 
+const removeSpaces = (str: string) => {
+  return str.replace(/\s/g, '_');
+}
 
 const updateLeaderboardItem = async (id: string, value: number, wallet: string, title: string) => {
   const { status } = await fetch('/api/' + getPathFromTitle(title), {
@@ -25,7 +28,7 @@ const updateLeaderboardItem = async (id: string, value: number, wallet: string, 
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ id: id, value: value, wallet: wallet }),
+    body: JSON.stringify({ id: removeSpaces(id), value: value, wallet: wallet }),
   })
 
   if (status === 200) {
@@ -34,8 +37,8 @@ const updateLeaderboardItem = async (id: string, value: number, wallet: string, 
 }
 
 export default function LeaderboardVoter({title, items, wallets}: any) {
-  const [voteInput, setVoteInput] = useState('');
-  const [unsubmittedInput, setUnsubmittedInput] = useState('');
+  const [voteInput, setVoteInput] = useState("");
+  const [unsubmittedInput, setUnsubmittedInput] = useState("");
   const [itemsState, setItemsState] = useState(items)
   const { address, isConnected } = useAccount();
   const { publicKey } = useWallet();
@@ -79,8 +82,6 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
 
   return (
     <div className={styles.container}>
-      {/* {address && JSON.stringify(findItemById(address?.toString(), title))}
-      {publicKey && JSON.stringify(findItemById(publicKey?.toString(), title))} */}
         <div className={styles.inner}>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.labels}>
@@ -95,7 +96,7 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
             <div className={styles.leaderboard}>
                 {itemsState.map((item: any, i: number) => (
                     <div className={styles.vote} key={i}>
-                    <div>{(voteInput === item.id) ? item.votes + 1 : item.votes}</div> <div>{title === "Ticker" && !item.id.startsWith("$") ? "$" : ""}{item.id}</div>
+                    <div>{(voteInput === item.id) ? item.votes + 1 : item.votes}</div> <div>{title === "Ticker" && !item.id.startsWith("$") ? "$" : ""}{item.id.replace(/_/g, " ").replace(/-/g, " ")}</div>
                     <div className={styles.button}>
                     <Button disabled={(itemFound() && (findItemById(address?.toString() || publicKey?.toString() || "", title) !== item.id)) || '' !== voteInput && voteInput !== item.id} onClick={() => {
                       setVoteInput(item.id);
@@ -109,7 +110,6 @@ export default function LeaderboardVoter({title, items, wallets}: any) {
                 ))}
             </div>
             <div className={styles.newVote}>
-              {/* {voteInput} */}
                 <div className={styles.writeInInput}><input className={styles.input} type="text" value={unsubmittedInput} onChange={(e) => setUnsubmittedInput(e.target.value)} placeholder="Write-in Candidate..." /></div>
                 <div className={styles.writeInButton}><Button disabled={itemFound() || '' !== voteInput} onClick={() => {
                   setVoteInput(unsubmittedInput);
